@@ -470,7 +470,7 @@ void RegistryModuleLoader::init() {
 
 RegistryModuleLoader::~RegistryModuleLoader() {
   if (handle_ == nullptr) {
-    // The module was not loaded or did not initalize.
+    // The module was not loaded or did not initialize.
     RegistryFactory::instance().modules_.erase(RegistryFactory::getModule());
   }
 
