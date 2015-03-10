@@ -431,7 +431,7 @@ typedef std::shared_ptr<PluginRegistryHelper> PluginRegistryHelperRef;
 class RegistryModuleLoader : private boost::noncopyable {
  public:
   /// Unlock the registry, open, construct, and allow the module to declare.
-  RegistryModuleLoader(const std::string& path);
+  explicit RegistryModuleLoader(const std::string& path);
   /// Keep the symbol resolution/calling out of construction.
   void init();
 
