@@ -43,7 +43,7 @@ namespace osquery {
  */
 #define CREATE_REGISTRY(type, name)                           \
   namespace registry {                                        \
-  __attribute__((constructor)) static void type##Registry() { \
+  __attribute__((__constructor__)) static void type##Registry() { \
     Registry::create<type>(name);                             \
   }                                                           \
   }
